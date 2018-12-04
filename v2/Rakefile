@@ -1,0 +1,37 @@
+VARS = [:a,:b] #Utilizando uma constante para receber o valor de :a e :b
+
+desc 'soma dois números'
+task :soma, VARS do |task, args|
+  a,b = number_fecth(args)
+  puts a+b
+end
+
+desc 'Subtrai dois números'
+task :sub, VARS do |task, args|
+  a,b = number_fecth(args)
+  puts a-b
+end
+
+desc 'Multiplica dois números'
+task :mult, VARS do |task, args|
+  a,b = number_fecth(args)
+  puts a*b
+end
+
+desc 'Divide dois números'
+task :dividi, VARS do |task, args|
+  a,b = number_fecth(args)
+  puts a/b
+e
+
+
+def number_fecth(args) 
+  VARS		
+   .map{|var|as_number(args[var])} #Mapeando constante
+   
+ end
+
+
+def as_number(n) 
+  n.to_f
+end
