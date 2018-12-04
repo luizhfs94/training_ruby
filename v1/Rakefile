@@ -1,20 +1,25 @@
 desc 'soma dois números'
 task :soma, [:a, :b] do |task, args|
-  puts args[:a].to_f + args[:b].to_f
+  puts as_number(args[:a]) + as_number(args[:b])
 end
 
 desc 'Subtrai dois números'
 task :sub, [:a, :b] do |task, args|
-  puts args[:a].to_f - args[:b].to_f
+  puts as_number(args[:a]) - as_number(args[:b])
 end
 
 desc 'Multiplica dois números'
 task :mult, [:a, :b] do |task, args|
-  puts args[:a].to_f * args[:b].to_f
+  puts as_number(args[:a]) * as_number(args[:b])
 end
 
 desc 'Divide dois números'
 task :dividi, [:a, :b] do |task, args|
-  puts args[:a].to_f / args[:b].to_f
+  puts as_number(args[:a]) / as_number(args[:b])
 end
 
+
+
+def as_number(n) #Adicionado método para converter tipo
+  n.to_f
+end
