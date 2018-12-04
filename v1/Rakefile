@@ -1,0 +1,20 @@
+desc 'soma dois números'
+task :soma, [:a, :b] do |task, args|
+  puts args[:a].to_f + args[:b].to_f
+end
+
+desc 'Subtrai dois números'
+task :sub, [:a, :b] do |task, args|
+  puts args[:a].to_f - args[:b].to_f
+end
+
+desc 'Multiplica dois números'
+task :mult, [:a, :b] do |task, args|
+  puts args[:a].to_f * args[:b].to_f
+end
+
+desc 'Divide dois números'
+task :dividi, [:a, :b] do |task, args|
+  puts args[:a].to_f / args[:b].to_f
+end
+
