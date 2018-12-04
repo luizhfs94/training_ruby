@@ -1,0 +1,5 @@
+desc 'soma dois números'
+task :soma, [:a, :b] do |task, args|
+  puts args[:a].to_f + args[:b].to_f
+end
+
